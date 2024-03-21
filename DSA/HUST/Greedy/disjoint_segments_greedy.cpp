@@ -2,7 +2,7 @@
 #define N 100001
 using namespace std;
 int n;
-int count;
+int Segcount;
 typedef struct Segment{
 	int a, b;
 
@@ -42,7 +42,7 @@ void solve(){
 	}
 	for (int i = 1; i<=n; i++){
 		if (ans[i].a >= 0 && ans[i].b > 0){
-			count++;
+			Segcount++;
 		}
 	}
 
@@ -50,7 +50,7 @@ void solve(){
 int main(){
 	input();
 	solve();
-	cout << count;
+	cout << Segcount;
 	return 0;
 
 }
