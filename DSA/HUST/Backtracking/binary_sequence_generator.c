@@ -2,7 +2,7 @@
 #define N 20
 int x[N];
 int n;
-int check11(int x[n]){
+int check11(int x[N]){
 	for (int i = 1; i<=n;i++){
 		if (x[i]==1 && x[i+1]==1) return 0;
 	}
