@@ -1,3 +1,4 @@
+//calculate y-power of x without using math.h header
 #include <iostream>
 using namespace std;
 
