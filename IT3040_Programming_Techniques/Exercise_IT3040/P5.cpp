@@ -38,7 +38,12 @@ void Print_Matrix(float **M, int R, int C){
     cout << endl;
   }
 }
-
+void Free_Matrix(float **M, int R){
+  for (int i = 0; i < R; i++){
+    delete [] M[i];
+  }
+  delete [] M;
+}
 int main(){
   int C, R;
   cout << "Column Input: " << endl;
@@ -51,5 +56,8 @@ int main(){
   float **M2 = Matrix_Input(R, C);
   float **M3 = Matrix_Add(M1, M2, R, C);
   Print_Matrix(M3, R, C);
+  Free_Matrix(M1, R);
+  Free_Matrix(M2, R);
+  Free_Matrix(M3, R);
   return 0;
 }
